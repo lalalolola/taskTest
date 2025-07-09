@@ -1,0 +1,108 @@
+.hero {
+  --padding-top: 42px;
+  padding: calc(var(--padding-top) + 40px) 0 40px;
+  background: image-set(url("../img/index/hero-back@1x.webp") type("image/webp") 1x,
+    url("../img/index/hero-back@2x.webp") type("image/webp") 2x,
+    url("../img/index/hero-back@1x.jpg") 1x,
+    url("../img/index/hero-back@2x.jpg") 2x);
+  background-repeat: no-repeat;
+  color: $primary__fonts-color;
+  background-position: center;
+  background-size: cover;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    --padding-top: 52px;
+    background-position: center;
+    background-size: cover;
+    padding: calc(var(--padding-top) + 60px) 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 203px 0;
+  }
+}
+
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: 425px) {
+    max-width: 65%;
+  }
+}
+
+.hero__title {
+  margin: 0 0 25px 0;
+  font-size: var(--h1);
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 80px 0;
+  }
+}
+
+.hero__slogan {
+  font-weight: 700;
+  font-size: var(--h3);
+  margin: 0 0 10px 0;
+}
+
+.hero__list {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 80px 0;
+  }
+}
+
+.hero__item {
+  font-size: var(--h3);
+  position: relative;
+  padding-left: 26px;
+
+  &::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    padding: 0 10px;
+  }
+}
+
+.hero__item-text {
+  font-size: inherit;
+  color: inherit;
+  margin: 0;
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.hero__buttons-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 400px;
+    gap: 30px;
+  }
+}

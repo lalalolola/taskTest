@@ -1,0 +1,32 @@
+.button {
+  display: inline-block;
+  background-color: $special__color;
+  text-transform: uppercase;
+  color: $white;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid $white;
+  border-radius: 4px;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  padding: 15px;
+  font-size: var(--small_text);
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $dark-blue;
+  }
+
+  &--white {
+    color: $other-dark-color;
+    background-color: $white;
+    border-color: $border-gray;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      border-color: $white;
+      color: $white;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2"),
+    url("../fonts/lato/Lato-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/lato/Lato-Semibold.woff2") format("woff2"),
+  url("../fonts/lato/Lato-Semibold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/lato/Lato-Bold.woff2") format("woff2"),
+  url("../fonts/lato/Lato-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/lato/Lato-Black.woff2") format("woff2"),
+  url("../fonts/lato/Lato-Black.woff") format("woff");
+  font-display: swap;
+}
+
+:root {
+  --h1: 28px;
+  --h2: 20px;
+  --h3: 18px;
+  --m1: 13px;
+  --m2: 13px;
+  --base-text: 13px;
+  --small_text: 13px;
+
+  --width-base: 320;
+  --width-current: 100vw;
+  --width-multiplier: var(--width-current) / var(--width-base);
+
+
+
+  @media (min-width: $tablet-width) {
+    --width-base: 768;
+
+    --h1: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    --width-base: 1920;
+
+
+    --h1: calc(48 * var(--width-multiplier));
+    --h2: calc(36 * var(--width-multiplier));
+    //--h3: calc(20 * var(--width-multiplier));
+    --m1: calc(18 * var(--width-multiplier));
+    --m2: calc(15 * var(--width-multiplier));
+    --base-text: 16;
+  }
+}
